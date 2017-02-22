@@ -3,14 +3,78 @@
 <head>
 	<meta charset="utf-8">
 	<title>Zero Log File Parser</title>
-	<META NAME="viewport" CONTENT="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
 	<meta name="description" content="Zero Log File Parser">
 	<meta name="author" content="Keith Thomas">
 	<style>
+		
 body {
+	width: 100%;
+	margin: auto;
 	background-color: #bfdfed;
 	font-size: 16px	
 }
+
+#intro {
+	max-width: 600px;
+	margin: auto;
+}		
+		
+#title{
+	border: 2px solid #808080;	
+	background-color: #e8e8e8;
+    height: 38px;
+    width: 300px;
+    font-size: 30px;
+    text-align: center;
+    margin:25px auto 25px;
+}
+
+#buttons {
+  width: 300px;
+  margin-left:auto;
+  margin-right:auto;
+}		
+
+#infile {
+	padding-top: 15px;
+	/*-webkit-appearance: button;*/
+	text-align: center;
+	font-size: 16px;
+	font-family: sans-serif;
+	height: 35px;
+	width: 118px;
+	display: inline-block;
+	background-color: #e8e8e8;
+	border: 2px solid;
+	border-top-color: white;
+	border-left-color: white;
+}
+
+input[type=file] {
+	display: none;
+}
+
+#down {
+	margin-left: 52px;
+	width: 120px;
+	height: 52px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 16px;
+	display: inline-block;
+	background-color: #e8e8e8;
+	border: 2px solid;
+	border-top-color: white;
+	border-left-color: white;
+}
+
+#print {
+	background-color: #e8e8e8;
+	display: inline-block;
+	padding: 2px;
+}		
+		
 #parsed {
 	white-space: pre;
 	font-family: monospace;
@@ -20,53 +84,11 @@ body {
     overflow-y: auto;
     overflow-x: auto;
 }
-
-#title{
-	border-style: groove;
-	border-color: black;
-    height: 40px;
-    width: 300px;
-    font-size: 30px;
-    text-align: center;
-    margin:25px auto 25px;
-}
-
-#down {
-	margin-left: 60px;
-	height: 50px;
-	padding-left: 20px;
-	padding-right: 20px;
-	font-size: 16px;
-	display: inline-block;
-		}
-
-#infile {
-	padding-top: 15px;
-	-webkit-appearance: button;
-	text-align: center;
-	font-size: 16px;
-	font-family: Arial;
-	
-
-	height: 35px;
-	width: 120px;
-	display: inline-block;
-	background-color: #e8e8e8;
-	cursor: point;
-}
-
-input[type=file] {
-	position: absolute; left: -99999rem;
-	width: 400px;
-	background-color: #e8e8e8;
-	font-size: 16px;
-}
-
-#print {
-	background-color: #e8e8e8;
-	display: inline-block;
-	padding: 2px;
-}
+		
+#disclaim {
+	max-width: 600px;
+	margin: auto;
+}		
 		
 #screenshot {        
   display:block;
@@ -77,15 +99,19 @@ input[type=file] {
 </head>
 
 <body>
-	
+
+<div id="intro">	
 <p id="title" >Zero Log File Parser</p>
 <p>Decoder for Zero motorcycle MBB or BMS log files. Get log files from the Zero App (Support/Email Bike Logs), send to file storage. Choose .bin file to decode text.</p>
-
+</div>
+	
+<div id="buttons">
 <label id="infile">Choose File
 <input type="file" id="choose" />	
 </label>	
 
 <button id="down" >Download</button> <br><br>
+</div>		
 
 <div id="fname"></div>	
 	
