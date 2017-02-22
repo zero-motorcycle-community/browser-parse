@@ -288,9 +288,25 @@ if (typeof module !== "undefined" && module.exports) {
   });
 }	
 </script>	
-<script>	
+<script>
+/*
+zero-parse.js
+Decoder for Zero motorcycle MBB or BMS log files.
+1.0 
+02/22/2017
+
+Copyright 2017 Keith Thomas
+
+License: MIT https://github.com/keithxemi/browser-parse/blob/master/LICENSE
+
+source https://github.com/keithxemi/browser-parse/blob/master/zero-parse.js
+*/
+
+/* jslint browser: true  */
+/*global saveAs, Blob, FileReader, DataView, Uint8Array, Uint16Array, Uint32Array */
+
 (function () {
-	'use strict';	
+	'use strict';
 	
 	var logFileName,
 		parsedText;
@@ -1031,7 +1047,7 @@ if (typeof module !== "undefined" && module.exports) {
 	function saveLog() {
 		var blob = new Blob([parsedText], {type: "text/plain;charset=utf-8"});
 		
-		if (parsedText == undefined) {
+		if (parsedText === undefined) {
 			return;
 		}
 		saveAs(blob, logFileName);
@@ -1040,7 +1056,6 @@ if (typeof module !== "undefined" && module.exports) {
 	document.getElementById('choose').addEventListener('change', readFile);
 	document.getElementById('down').addEventListener('click', saveLog);
 }());
-
 </script>
 
 </body>
