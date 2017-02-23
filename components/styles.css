@@ -63,7 +63,7 @@ input[type=file] {
 	background-color: #e8e8e8;
 	display: inline-block;
 	padding: 2px;
-}		
+}
 
 #parsed {
 	white-space: pre;
@@ -84,4 +84,4 @@ input[type=file] {
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
-}		
+}

@@ -6,7 +6,13 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
 	<meta name="description" content="Zero Log File Parser">
 	<meta name="author" content="Keith Thomas">
+	<!-- delete <link rel="stylesheet" href="styles.css"> -->
 	<link rel="stylesheet" href="styles.css">
+	
+	<style>
+	<!-- insert styles.css -->
+	</style>
+	
 </head>
 
 <body>
@@ -18,7 +24,7 @@
 	
 <div id="buttons">
 <label id="infile">Choose File
-<input type="file" id="choose" />	
+<input type="file" id="choose" />
 </label>	
 
 <button id="down" >Download</button> <br><br>
@@ -32,11 +38,19 @@
 	
 <div id="disclaim"> DISCLAIMER: This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles. It is maintained by riders just like you. Information is presented as-is and may be inaccurate.<br><br>
 This decoder works offline. Use Chrome or Firefox.<br><br>
-		
+
+<!-- replace "send-logs.png"  with send-logs-base64-png.txt -->	
 <img alt="screen shot" id="screenshot"  src="send-logs.png"/></div>	
 
-<script type="text/javascript" src="FileSaver.js"></script>	
-<script  type="text/javascript" src="zero-parse.js"></script>
+<!-- delete src="FileSaver.js" -->	
+<script type="text/javascript" src="FileSaver.js">
+/* insert FileSaver.js */
+</script>
+	
+<!-- delete src="zero-parse.js" -->	
+<script  type="text/javascript" src="zero-parse.js">
+/* insert zero-parse.js */	
+</script>
 
 </body>
 </html>
