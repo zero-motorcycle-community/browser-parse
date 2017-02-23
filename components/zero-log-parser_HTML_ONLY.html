@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Zero Log File Parser</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+	<meta name="description" content="Zero Log File Parser">
+	<meta name="author" content="Keith Thomas">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="intro">	
+<p id="title" >Zero Log File Parser</p>
+<p>Decoder for Zero motorcycle MBB or BMS log files. Get log files from the Zero App (Support/Email Bike Logs), send to file storage. Choose .bin file to decode text.</p>
+</div>
+	
+<div id="buttons">
+<label id="infile">Choose File
+<input type="file" id="choose" />	
+</label>	
+
+<button id="down" >Download</button> <br><br>
+</div>		
+
+<div id="fname"></div>	
+	
+<div id="print"></div><br><br>
+
+<div id="parsed"></div>
+	
+<div id="disclaim"> DISCLAIMER: This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles. It is maintained by riders just like you. Information is presented as-is and may be inaccurate.<br><br>
+This decoder works offline. Use Chrome or Firefox.<br><br>
+		
+<img alt="screen shot" id="screenshot"  src="send-logs.png"/></div>	
+
+<script type="text/javascript" src="FileSaver.js"></script>	
+<script  type="text/javascript" src="zero-parse.js"></script>
+
+</body>
+</html>

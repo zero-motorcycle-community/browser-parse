@@ -1,0 +1,87 @@
+body {
+	width: 100%;
+	margin: auto;
+	background-color: #bfdfed;
+	font-size: 16px	
+}
+
+#intro {
+	max-width: 600px;
+	margin: auto;
+}
+
+#title{
+	border: 2px solid #808080;	
+	background-color: #e8e8e8;
+	height: 38px;
+	width: 300px;
+	font-size: 30px;
+	text-align: center;
+	margin:25px auto 25px;
+}
+
+#buttons {
+	width: 300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#infile {
+	padding-top: 15px;
+	/*-webkit-appearance: button;*/
+	text-align: center;
+	font-size: 16px;
+	font-family: sans-serif;
+	height: 35px;
+	width: 118px;
+	display: inline-block;
+	background-color: #e8e8e8;
+	border: 2px solid;
+	border-top-color: white;
+	border-left-color: white;
+}
+
+input[type=file] {
+	display: none;
+}
+
+#down {
+	margin-left: 52px;
+	width: 120px;
+	height: 52px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 16px;
+	display: inline-block;
+	background-color: #e8e8e8;
+	border: 2px solid;
+	border-top-color: white;
+	border-left-color: white;
+}
+
+#print {
+	background-color: #e8e8e8;
+	display: inline-block;
+	padding: 2px;
+}		
+
+#parsed {
+	white-space: pre;
+	font-family: monospace;
+	background-color: #e8e8e8;
+	margin: 5px 0;
+	max-height: 400px;
+	overflow-y: auto;
+	overflow-x: auto;
+}
+
+#disclaim {
+	max-width: 600px;
+	margin: auto;
+}
+
+#screenshot {        
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}		
