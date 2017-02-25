@@ -16,3 +16,5 @@ Parser and parser download page now hosted on GitHub
 https://zero-motorcycle-community.github.io/browser-parse/
 
 https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html
+
+Use powershell script .\merge.ps1 to create single file html from components.
