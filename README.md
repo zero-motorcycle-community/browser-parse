@@ -10,3 +10,9 @@ DISCLAIMER: This software is not sponsored by, associated with, affiliated with,
 This decoder works offline. Use Chrome or Firefox.
 
 zero-log-parser.html is built from the files in the component folder. It includes all styles, images, and scripts in a single file.
+
+Parser and parser download page now hosted on GitHub
+
+https://zero-motorcycle-community.github.io/browser-parse/
+
+https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html
