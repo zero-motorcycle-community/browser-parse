@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Zero Log File Parser</title>
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
+	<meta name="description" content="Zero Log File Parser">
+	<meta name="author" content="Keith Thomas">
+	
+<style>
