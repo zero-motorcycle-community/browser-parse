@@ -471,7 +471,7 @@ License: MIT https://github.com/keithxemi/browser-parse/blob/master/LICENSE
 			f.bc = dec(x.buffer, 'u16', 0x12);
 				
 
-			f.diff = f.max - f.min;
+			f.diff = (f.max - f.min).toFixed(3);
 			f.prechg = 0;
 			if (f.mv) {
 				f.prechg = f.vc * 100 / f.mv;
@@ -486,11 +486,11 @@ License: MIT https://github.com/keithxemi/browser-parse/blob/master/LICENSE
 			case 1:
 				m = 'Closing Contactor';
 				entry.conditions = 'vmod: ' + f.mv +
-					'maxsys: ' + f.max +
+					' maxsys: ' + f.max +
 					' minsys: ' + f.min +
 					' diff: ' + f.diff +
 					' vcap: ' + f.vc +
-					' prechg: ' + f.prechg + '%';
+					' prechg: ' + Math.floor(f.prechg) + '%';
 				break;
 			case 2:
 				m = 'Registered';
@@ -541,7 +541,7 @@ License: MIT https://github.com/keithxemi/browser-parse/blob/master/LICENSE
 			f.minCell = dec(x.buffer, 'u16', 2);
 			f.temp = x[4];
 			f.max = dec(x.buffer, 'u16', 5);
-			f.percent = f.limit * 100 / f.max;
+			f.percent = Math.floor(f.limit * 100 / f.max);
 			entry.event = 'Batt Dischg Cur Limited';
 			entry.conditions = f.limit + ' A (' + f.percent + '%), ' +
 				'MinCell: ' + f.minCell + 'mV, MaxPackTemp: ' + f.temp + 'C';
