@@ -1,13 +1,3 @@
-﻿<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Zero Log File Parser</title>
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
-	<meta name="description" content="Zero Log File Parser">
-	<meta name="author" content="Keith Thomas">
-	<link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
-	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -33,11 +23,3 @@
 	
 <div id="disclaim"> DISCLAIMER: This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles. It is maintained by riders just like you. Information is presented as-is and may be inaccurate.<br><br>
 This decoder works offline. Use Chrome or Firefox.<br><br>
-<img alt="screen shot" id="screenshot"  src="send-logs.png"/></div>	
-	
-<script type="text/javascript" src="FileSaver.js"></script>
-	
-<script  type="text/javascript" src="zero-parse.js"></script>
-
-</body>
-</html>

@@ -1,0 +1,59 @@
+<!-- start of htm-body.txt -->
+</head>
+
+<body>
+
+
+<label><input type="file" id="choose" />
+<div id="title" >Zero Log Viewer</div></label>
+<div id="intro">
+SummariZe AnalyZe VisualiZe MBB logs
+</div>
+	
+
+	
+<div id="summtbl">
+	<div class="logdate bd" id="logdates"><br></div>
+	<table id="summary">
+<tr><td class="tdr">distance</td><td id="dist" class="bd"></td><td id="rhours" class="tdrb"></td><td class="tdl">ride hours</td></tr>
+<tr><td class="tdr">max rpm</td><td id="mrpm" class="bd"></td><td id="avgspd" class="tdrb"></td><td class="tdl">average speed</td></tr>
+<tr><td class="tdr">riding</td><td id="rmin" class="bd"></td><td id="rmax" class="tdrb"></td><td class="tdl">temperature</td></tr>
+<tr><td class="tdr">max motor</td><td id="mtemp" class="bd"></td><td id ="minpct" class="tdrb"></td><td class="tdl">min limit</td></tr>
+<tr><td class="tdr">motor</td><td id="mmin" class="bd"></td><td id="mmax" class="tdrb"></td><td class="tdl">amps</td></tr>
+<tr><td class="tdr">battery</td><td id="bmin" class="bd"></td><td id="bmax" class="tdrb"></td><td class="tdl">amps</td></tr>
+	</table>
+</div>
+
+<div id="ui">
+<fieldset>	
+<div>
+<div id="xaxis" class="touch">Events</div>
+<input type="checkbox" id="usefahrenheit">
+<label id="templabel" for="usefahrenheit" class="touch">&deg;C</label>
+<input type="checkbox" id="usemiles">
+<label id="mileslabel" for="usemiles" class="touch">km</label>
+</div>
+	
+<div>	
+<input type="radio" id="c1" name="chart" checked>
+<label id="r1" for="c1" class="touch">1</label>
+<input type="radio" id="c2" name="chart">
+<label id="r2" for="c2" style = "background-color: #bfdfed" class="touch">2</label>
+<input type="radio" id="c3" name="chart">
+<label id="r3" for="c3" style = "background-color: #bfdfed" class="touch">3</label>
+<input type="radio" id="c4" name="chart">	
+<label id="r4" for="c4" style = "background-color: #bfdfed" class="touch">4</label>
+<input type="radio" id="c5" name="chart">	
+<label id="r5" for="c5" style = "background-color: #bfdfed" class="touch">5</label>	
+</div>
+</fieldset>
+</div>
+	
+<div id="print"></div>	
+	
+<div id="container"></div>
+	
+<div id="disclaim">Viewer works offline on Chrome or Firefox. Click title to choose a log file. Click-drag or pinch chart to zoom in, shift-click or use two fingers to pan. Click legends to toggle series.<br><br>
+<a href="https://zero-motorcycle-community.github.io/browser-parse/" > Download instructions</a> &nbsp;Decode full text of MBB and BMS log files.&nbsp;<a href="https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html" >Online parser</a><br><br>DISCLAIMER: This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles. It is maintained by riders just like you. Information is presented as-is and may be inaccurate.
+</div>	
+<!-- end of htm-body.txt -->

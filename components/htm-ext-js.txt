@@ -1,0 +1,8 @@
+<script type="text/javascript" src="jquery.js"></script>	
+<script type="text/javascript" src="highcharts.js"></script>
+<script type="text/javascript" src="exporting.js"></script>
+<script type="text/javascript" src="offline-exporting.js"></script>
+<script type="text/javascript" src="zero-view.js"></script>
+
+</body>
+</html>

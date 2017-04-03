@@ -1,0 +1,129 @@
+body {
+	width: 100%;
+	margin: auto;
+	background-color: #bfdfed;
+	font-size: 16px	
+}
+
+#intro {
+	max-width: 800px;
+	margin: auto;
+	text-align: center;
+}
+
+#title{
+	border: 2px solid #808080;	
+	background-color: #e8e8e8;
+	height: 38px;
+	width: 300px;
+	font-size: 30px;
+	text-align: center;
+	margin: 5px auto 2px;
+}
+
+input[type=file] {
+	display: none;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+input[type=radio] {
+	display: none;
+}
+
+#ui {
+	width: 300px;
+	margin: 0 auto;
+}
+
+fieldset {
+	padding: 0px;
+	text-align: center;
+	border: none;
+}
+
+.touch {
+	border: 2px solid #808080;	
+	background-color: #e8e8e8;
+	font-size: 20px;
+	display: inline-block;
+	text-align: center;
+	margin: 5px;
+	padding: 10px 3px 10px 3px;
+	min-width:  35px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+#xaxis {
+	min-width: 100px;
+}
+
+#print {
+	text-align: center;
+	background-color: #e8e8e8;
+	width: auto;
+	margin: 0 auto;
+}
+
+.bd {
+	background-color: #e8e8e8;
+	font-weight: 600;
+}
+
+#summtbl {
+	width: 100%;
+	margin: 0 auto;
+	line-height: 100%;
+}
+
+#summary {
+	table-layout: fixed;
+	width: 310px;
+	margin: 0 auto;
+}
+
+.logdate {
+	width: 320px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.tdr {
+	width: 100px;
+	text-align: right;
+}
+
+.tdrb {
+	background-color: #e8e8e8;
+	width: 48px;
+	text-align: right;
+	font-weight: 700; 
+}
+
+.tdl {
+	width: 100px;
+	text-align: left;
+}
+
+#container {
+	display: none;
+	width: auto;
+	height: 300px; 
+	margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+	#container {
+		height: 600px;
+		padding: 0 16px  0 16px; 
+	}
+}
+
+#disclaim {
+	top: 0px;
+	max-width: 600px;
+	margin: auto;
+}

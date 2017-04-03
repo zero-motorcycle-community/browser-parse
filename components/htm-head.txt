@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Zero Log File Parser</title>
+	<title>Zero Log Viewer</title>
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
-	<meta name="description" content="Zero Log File Parser">
+	<meta name="description" content="Zero Log File Viewer">
 	<meta name="author" content="Keith Thomas">
 	<link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+    <!-- end of htm-head.txt -->
