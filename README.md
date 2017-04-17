@@ -1,24 +1,31 @@
 # browser-parse
-Decoder for Zero Motorcycle MBB or BMS log files.
+## Functionality
+- HTML5-based Decoder for Zero Motorcycles log files, both [MBB](http://zeromanual.com/index.php/Unofficial_Service_Manual#Main_Bike_Board) and [BMS](http://zeromanual.com/index.php/Unofficial_Service_Manual#Battery_Management_System).
+- HTML5 Offline parser for Zero Motorcycles log files.
+- HTML5 Offline viewer with Highcharts for MBB log files.
 
-HTML5 Offline parser for Zero Motorcycles log files.
+# Usage
+1. Get log files from the Zero App (Support/Email Bike Logs)
+1. send to file storage.
+1. Choose .bin file in the Decoder tool to decode text and view charts.
 
-HTML5 Offline viewer with Highcharts for MBB log files.
+**DISCLAIMER:** This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles. It is maintained by riders just like you. Information is presented as-is and may be inaccurate.
 
-Get log files from the Zero App (Support/Email Bike Logs), send to file storage. Choose .bin file to decode text and view charts.
+# Offline Support
+- These tools work offline.
+- Use Chrome or Firefox to open the web page and save or cache it.
+- On iOS, Mobile Safari supports marking a page as a bookmark or a favorite, and Add To Homescreen can make it accessible with a conventional app icon.
 
-DISCLAIMER: This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles. It is maintained by riders just like you. Information is presented as-is and may be inaccurate.
+# Building
+`zero-log-parser.html` is built from the files in the `component` folder. It includes all styles, images, and scripts in a single file to make offline usage work well.
 
-These tools work offline. Use Chrome or Firefox.
+## Windows
+Use powershell script `.\merge.ps1` to create single file html from components.
 
-zero-log-parser.html is built from the files in the component folder. It includes all styles, images, and scripts in a single file.
-
+# Online Support
 Parser, Viewer and Tools download page now hosted on GitHub
 
-https://zero-motorcycle-community.github.io/browser-parse/
+[Zero Log File Tools](https://zero-motorcycle-community.github.io/browser-parse/)
 
-https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html
-
-https://zero-motorcycle-community.github.io/browser-parse/zero-log-viewer.html
-
-Use powershell script .\merge.ps1 to create single file html from components.
+[Zero Log File Parser](https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html)
+[Zero Log File Viewer](https://zero-motorcycle-community.github.io/browser-parse/zero-log-viewer.html)
