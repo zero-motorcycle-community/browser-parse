@@ -6,7 +6,7 @@
 
 # Usage
 1. Get log files from the Zero App (Support/Email Bike Logs)
-1. send to file storage.
+1. Send to file storage.
 1. Choose .bin file in the Decoder tool to decode text and view charts.
 
 **DISCLAIMER:** This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles. It is maintained by riders just like you. Information is presented as-is and may be inaccurate.
