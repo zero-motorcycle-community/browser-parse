@@ -17,6 +17,7 @@ Parser, Viewer and Tools download page now hosted on GitHub
 [Zero Log File Tools](https://zero-motorcycle-community.github.io/browser-parse/)
 
 [Zero Log File Parser](https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html)
+
 [Zero Log File Viewer](https://zero-motorcycle-community.github.io/browser-parse/zero-log-viewer.html)
 
 ## Offline Support
