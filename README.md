@@ -11,7 +11,15 @@
 
 **DISCLAIMER:** This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles. It is maintained by riders just like you. Information is presented as-is and may be inaccurate.
 
-# Offline Support
+## Online Support
+Parser, Viewer and Tools download page now hosted on GitHub
+
+[Zero Log File Tools](https://zero-motorcycle-community.github.io/browser-parse/)
+
+[Zero Log File Parser](https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html)
+[Zero Log File Viewer](https://zero-motorcycle-community.github.io/browser-parse/zero-log-viewer.html)
+
+## Offline Support
 - These tools work offline.
 - Use Chrome or Firefox to open the web page and save or cache it.
 - On iOS, Mobile Safari supports marking a page as a bookmark or a favorite, and Add To Homescreen can make it accessible with a conventional app icon.
@@ -21,11 +29,3 @@
 
 ## Windows
 Use powershell script `.\merge.ps1` to create single file html from components.
-
-# Online Support
-Parser, Viewer and Tools download page now hosted on GitHub
-
-[Zero Log File Tools](https://zero-motorcycle-community.github.io/browser-parse/)
-
-[Zero Log File Parser](https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html)
-[Zero Log File Viewer](https://zero-motorcycle-community.github.io/browser-parse/zero-log-viewer.html)
