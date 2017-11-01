@@ -14,19 +14,22 @@
 ## Online Support
 Parser, Viewer and Tools download page now hosted on GitHub
 
-[Zero Log File Tools](https://zero-motorcycle-community.github.io/browser-parse/)
-
-[Zero Log File Parser](https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html)
-
-[Zero Log File Viewer](https://zero-motorcycle-community.github.io/browser-parse/zero-log-viewer.html)
+- [Zero Log File Tools](https://zero-motorcycle-community.github.io/browser-parse/)
+- [Zero Log File Parser](https://zero-motorcycle-community.github.io/browser-parse/zero-log-parser.html)
+- [Zero Log File Viewer](https://zero-motorcycle-community.github.io/browser-parse/zero-log-viewer.html)
 
 ## Offline Support
 - These tools work offline.
 - Use Chrome or Firefox to open the web page and save or cache it.
-- On iOS, Mobile Safari supports marking a page as a bookmark or a favorite, and Add To Homescreen can make it accessible with a conventional app icon.
+- On iOS
+  - **Bookmarking** Mobile Safari supports marking a page as a bookmark or a favorite, and Add To Homescreen can make it accessible with a conventional app icon.
+  - **Log File Management** As of iOS 11, the Files functionality can save the log from the native Mail client (and others like Google Inbox/Gmail).
 
 # Building
 `zero-log-parser.html` is built from the files in the `component` folder. It includes all styles, images, and scripts in a single file to make offline usage work well.
 
 ## Windows
 Use powershell script `.\merge.ps1` to create single file html from components.
+
+## Unix-like OSes
+Build support coming soon.
