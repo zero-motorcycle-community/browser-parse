@@ -5,11 +5,14 @@
 - HTML5 Offline viewer with Highcharts for MBB log files.
 
 # Usage
-1. Get log files from the Zero App (Support/Email Bike Logs)
+1. Get log files from the [Zero App](http://www.zeromotorcycles.com/app/help/ios/) (Support/Email Bike Logs)
 1. Send to file storage.
 1. Choose .bin file in the Decoder tool to decode text and view charts.
 
-**DISCLAIMER:** This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles. It is maintained by riders just like you. Information is presented as-is and may be inaccurate.
+# DISCLAIMER:
+- This software is not sponsored by, associated with, affiliated with, or endorsed by Zero Motorcycles.
+- It is maintained by riders just like you.
+- Information is presented as-is and may be inaccurate.
 
 ## Online Support
 Parser, Viewer and Tools download page now hosted on GitHub
@@ -32,4 +35,16 @@ Parser, Viewer and Tools download page now hosted on GitHub
 Use powershell script `.\merge.ps1` to create single file html from components.
 
 ## Unix-like OSes
-Build support coming soon.
+Run `make`:
+- `make logparser-offline` builds the offline log parser.
+- `make logviewer-offline` builds the offline log viewer.
+- `make logparser-online` builds the online log parser.
+- `make logviewer-online` builds the online log viewer.
+- `make logparser` builds online and offline parsers.
+- `make logviewer` builds online and offline viewers.
+- `make` builds everything.
+- `make clean all` forces a rebuild.
+
+### Pre-requisites
+- bash and make (GNU and non-GNU should work).
+- GNU Recode (available on Linux and Homebrew for OS X) is required to commit the same encoding as is checked into the repository.

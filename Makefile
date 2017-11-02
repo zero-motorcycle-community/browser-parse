@@ -1,0 +1,88 @@
+CWD=.
+COMPONENT_DIR=$(CWD)/components
+
+HTML_HEAD=$(COMPONENT_DIR)/htm-head.txt
+HTML_STYLE_OPEN=$(COMPONENT_DIR)/htm-style-tag.txt
+STYLES_CSS=$(COMPONENT_DIR)/styles.css
+VIEWER_CSS=$(COMPONENT_DIR)/viewer.css
+HTML_STYLE_END=$(COMPONENT_DIR)/htm-style-end.txt
+
+HTML_STYLE_LINK_OPEN=$(COMPONENT_DIR)/htm-style-link.txt
+HTML_BODY=$(COMPONENT_DIR)/htm-body.htm
+
+HTML_STYLES_LINK_OPEN=$(COMPONENT_DIR)/htm-styles-link.txt
+
+HTML_SCRIPT_OPEN=$(COMPONENT_DIR)/htm-script-tag.txt
+HTML_SCRIPT_JOIN=$(COMPONENT_DIR)/htm-script-mid.txt
+
+HTML_JS_INCLUDES=$(COMPONENT_DIR)/htm-ext-js.txt
+
+HIGHCHARTS_JS=$(COMPONENT_DIR)/highcharts.js
+JQUERY_JS=$(COMPONENT_DIR)/jquery.js
+EXPORTING_JS=$(COMPONENT_DIR)/exporting.js
+OFFLINE_EXPORTING_JS=$(COMPONENT_DIR)/offline-exporting.js
+ZERO_VIEW_JS=$(COMPONENT_DIR)/zero-view.js
+ZERO_PARSE_JS=$(COMPONENT_DIR)/zero-parse.js
+FILE_SAVER_JS=$(COMPONENT_DIR)/FileSaver.js
+
+HTML_1=$(COMPONENT_DIR)/htm1.txt
+HTML_2=$(COMPONENT_DIR)/htm2.txt
+HTML_2A=$(COMPONENT_DIR)/htm2a.txt
+HTML_3=$(COMPONENT_DIR)/htm3.txt
+HTML_4=$(COMPONENT_DIR)/htm4.txt
+HTML_5=$(COMPONENT_DIR)/htm5.txt
+HTML_6=$(COMPONENT_DIR)/htm6.txt
+
+HTML_SCRIPT_BODY_END=$(COMPONENT_DIR)/htm-off-end.txt
+
+LOG_VIEWER=zero-log-viewer
+LOG_VIEWER_PKG=$(CWD)/$(LOG_VIEWER).html
+LOG_VIEWER_HTML=$(COMPONENT_DIR)/$(LOG_VIEWER)_HTML_ONLY.html
+
+LOG_PARSER=zero-log-parser
+LOG_PARSER_PKG=$(CWD)/$(LOG_PARSER).html
+LOG_PARSER_HTML=$(COMPONENT_DIR)/$(LOG_PARSER)_HTML_ONLY.html
+
+SEND_LOGS=$(COMPONENT_DIR)/send-logs-base64-png.txt
+
+OUTPUTS=$(LOG_VIEWER_PKG) $(LOG_VIEWER_HTML) $(LOG_PARSER_PKG) $(LOG_PARSER_HTML)
+
+# Join with line endings:
+# GNU-sed:
+# JOIN=sed -e '$s/$/\n/' -s
+JOIN=$(CWD)/merge-files.sh
+RECODE=recode BS..UTF-8
+UNIX2DOS=$(CWD)/unix2dos
+
+$(LOG_VIEWER_PKG): $(HTML_HEAD) $(HTML_STYLE_OPEN) $(VIEWER_CSS) $(HTML_STYLE_END) $(HTML_BODY) $(HTML_SCRIPT_OPEN) $(JQUERY_JS) $(HTML_SCRIPT_JOIN) $(HIGHCHARTS_JS) $(EXPORTING_JS) $(OFFLINE_EXPORTING_JS) $(ZERO_VIEW_JS) $(HTML_SCRIPT_BODY_END)
+	$(JOIN) $(HTML_HEAD) $(HTML_STYLE_OPEN) $(VIEWER_CSS) $(HTML_STYLE_END) $(HTML_BODY) $(HTML_SCRIPT_OPEN) $(JQUERY_JS) $(HTML_SCRIPT_JOIN) $(HIGHCHARTS_JS) $(HTML_SCRIPT_JOIN) $(EXPORTING_JS) $(HTML_SCRIPT_JOIN) $(OFFLINE_EXPORTING_JS) $(HTML_SCRIPT_JOIN) $(ZERO_VIEW_JS) $(HTML_SCRIPT_BODY_END) | $(RECODE) > $@
+
+$(LOG_VIEWER_HTML): $(HTML_HEAD) $(HTML_STYLE_LINK_OPEN) $(HTML_BODY) $(HTML_JS_INCLUDES)
+	$(JOIN) $^ | $(RECODE) > $@
+
+$(LOG_PARSER_PKG): $(HTML_1) $(HTML_STYLE_OPEN) $(STYLES_CSS) $(HTML_STYLE_END) $(HTML_2) $(SEND_LOGS) $(HTML_3) $(FILE_SAVER_JS) $(HTML_4) $(ZERO_PARSE_JS) $(HTML_5)
+	$(JOIN) $^ | $(UNIX2DOS) | $(RECODE) > $@
+
+$(LOG_PARSER_HTML): $(HTML_1) $(HTML_STYLES_LINK_OPEN) $(HTML_2A) $(HTML_6)
+	$(JOIN) $^ | $(RECODE) > $@
+
+logviewer-offline: $(LOG_VIEWER_PKG)
+
+logviewer-online: $(LOG_VIEWER_HTML)
+
+logparser-offline: $(LOG_PARSER_PKG)
+
+logparser-online: $(LOG_PARSER_HTML)
+
+logparser: logparser-offline logparser-online
+
+logviewer: logviewer-offline logviewer-online
+
+all: logviewer logparser
+
+default: all
+
+clean: FORCE
+	-rm $(OUTPUTS)
+
+FORCE:
